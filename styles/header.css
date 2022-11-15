@@ -1,0 +1,129 @@
+.header{
+    display: flex;
+    height: 55px;
+    flex-direction: row;
+    justify-content:space-between;
+    position: fixed;
+    background-color: #ffffff;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 1px solid rgb(223, 223, 223);
+    z-index: 100;
+}
+.left-section{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+.middle-section {
+    margin-left: 50px;
+    margin-right: 100px;
+    flex: 1;
+    min-width: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-section {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 20px;
+    flex-shrink: 0;
+}
+.hamburger-icon{
+    padding-left: 25px;
+    padding-right: 25px;
+    height: 24px;
+}
+.youtube-icon{
+    height: 22px;
+}
+.youtube-icon:hover, .hamburger-icon:hover{
+    cursor: pointer;
+}
+.search-bar{
+    max-width: 350px;
+    min-width: 50px;
+    height: 35px;
+    border: 1px solid #ccc; 
+    font-size: 16px;
+    padding-left: 12px;
+    flex: 1;
+}
+.search-button{
+    height: 39px;
+    width: 70px;
+    border: none;
+    background-color: #f7f7f7;
+    border-top: 1px solid #cccc;
+    border-right: 1px solid #cccc;
+    border-bottom: 1px solid #cccc;
+}
+.search-icon {
+    height: 24px;
+}
+.voice-button{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    margin-left: 10px;
+    border: none;
+    background-color: #f4f4f4;
+}
+.voice-icon{
+    height: 24px;
+    background-color: #f4f4f4;
+}
+.right-section > .right{
+    height: 24px;
+}
+.channel-photo{
+    height: 32px;
+    border-radius: 16px;
+}
+.noti-icon, .create-feature, .moreapp-feature{
+    position: relative;
+    height: 24px;
+    width: 24px;
+}
+.noti-number{
+    position: absolute;
+    top: -2px;
+    right: -5px;
+    background-color: rgb(219, 0, 0);
+    color: white;
+    padding: 2px 5px;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 10px;
+  
+    border: 1px solid white;
+}
+.search-button, .voice-button, .create-feature, .moreapp-feature, .noti-icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-button .tool-tip, .voice-button .tool-tip, .create-feature .tool-tip, .moreapp-feature .tool-tip, .noti-icon .tool-tip{
+    position: absolute;
+    font-size: 12px;
+    background-color: rgb(106, 105, 105);
+    color: white;
+    padding: 8px 12px;
+    bottom: -50px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+.search-button:hover .tool-tip,.voice-button:hover .tool-tip, .create-feature:hover .tool-tip, .moreapp-feature:hover .tool-tip, .noti-icon:hover .tool-tip{
+    cursor: pointer;
+    opacity: 1;
+}
